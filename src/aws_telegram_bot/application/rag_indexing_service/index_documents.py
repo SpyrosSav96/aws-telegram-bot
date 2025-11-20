@@ -25,6 +25,7 @@ def index_documents():
         documents=all_splits,
         embedding=embeddings,
         url=settings.QDRANT_URL,
+        api_key=settings.QDRANT_API_KEY,
         collection_name="aws_telegram_bot_collection"
     )
 
