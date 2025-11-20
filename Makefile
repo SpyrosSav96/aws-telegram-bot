@@ -27,5 +27,5 @@ lint-check:
 
 index-qdrant:
 	@echo 'Indexing documents to Qdrant...'
-	uv run python -c "from telegram_agent_aws.application.rag_indexing_service.index_documents import index_documents; index_documents()"
+	uv run python -c "from aws_telegram_bot.application.rag_indexing_service.index_documents import index_documents; index_documents()"
 	@echo 'Documents indexed successfully.'
