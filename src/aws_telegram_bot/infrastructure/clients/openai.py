@@ -3,7 +3,7 @@ from functools import lru_cache
 
 from aws_telegram_bot.config import settings
 
-@lru_cache
+@lru_cache(maxsize=1)
 def get_openai_client() -> OpenAI:
     """
     Get or create the OpenAI client.
