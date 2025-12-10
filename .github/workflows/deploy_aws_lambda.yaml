@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1                  
-  ECR_REPOSITORY: aws_telegram_bot           
+  ECR_REPOSITORY: telegram_bot_agent           
 
 jobs:
   deploy:
