@@ -45,7 +45,7 @@ def generate_text_response_node(state: TelegramAgentState):
         system_message = f"{SYSTEM_PROMPT.prompt} \n Summary of conversation earlier: {summary}"
         messages = [SystemMessage(content=system_message)] + state["messages"]
     else:
-        messages = [SystemMessage(content=SYSTEM_PROMPT.prompt) + state["messages"]]
+        messages = [SystemMessage(content=SYSTEM_PROMPT.prompt)] + state["messages"]
 
     response = llm_with_tools.invoke(messages)
 
