@@ -1,5 +1,4 @@
 from langgraph.checkpoint.mongodb import MongoDBSaver
-from opik.integrations.adk import opik_tracer
 from opik.integrations.langchain import OpikTracer
 
 from aws_telegram_bot.application.conversation_service.workflow.graph import create_workflow_graph
