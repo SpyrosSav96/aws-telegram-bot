@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     COMET_API_KEY: str
     TELEGRAM_BOT_TOKEN: str
 
-    OPENAI_MODEL: str = "gpt-4o-min"
+    OPENAI_MODEL: str = "gpt-4o-mini"
     EMBEDDING_MODEL: str = "text-embedding-3-large"
 
     ELEVENLABS_VOICE_ID: str = "T8lgQl6x5PSdhmmWx42m"

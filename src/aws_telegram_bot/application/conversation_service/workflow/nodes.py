@@ -10,7 +10,7 @@ from aws_telegram_bot.infrastructure.clients.openai import get_openai_client
 from aws_telegram_bot.infrastructure.clients.elevenlabs import get_elevenlabs_client
 from aws_telegram_bot.domain.prompts import ROUTER_SYSTEM_PROMPT, SYSTEM_PROMPT
 from aws_telegram_bot.application.conversation_service.workflow.state import TelegramAgentState
-from aws_telegram_bot.application.conversation_service.workflow.tools import get_retriever_tool
+from aws_telegram_bot.application.conversation_service.workflow.tools import get_retrieval_tool
 
 
 openai_client = get_openai_client()
@@ -37,7 +37,7 @@ def router_node(state: TelegramAgentState):
 
 def generate_text_response_node(state: TelegramAgentState):
     llm = ChatOpenAI(model=settings.OPENAI_MODEL, api_key=settings.OPENAI_API_KEY)
-    llm_with_tools = llm.bind_tools([get_retriever_tool()])
+    llm_with_tools = llm.bind_tools([get_retrieval_tool()])
 
     summary = state.get("summary", "")
 
